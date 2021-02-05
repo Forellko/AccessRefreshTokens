@@ -1,0 +1,25 @@
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "admin",
+  "password": "admin",
+}
+
+###
+
+POST http://localhost:3000/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": ""
+}
+
+###
+
+GET http://localhost:3000/user/1
+Content-Type: application/json
+
+{
+  "accessToken": ""
+}
