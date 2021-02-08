@@ -4,8 +4,8 @@ const jwt = require('jsonwebtoken')
 const getNewTokens = async (req, res, next) => {
   const { username } = req.body
 
-  const accessToken = jwt.sign({ username }, 'fusionA')
-  const refreshToken = jwt.sign({ username }, 'fusionR')
+  const accessToken = jwt.sign({ username }, 'fusionA', { expiresIn: 30 })
+  const refreshToken = jwt.sign({ username }, 'fusionR', { expiresIn: 60 })
 
   await User.update(
     { accessToken: accessToken, refreshToken: refreshToken },
