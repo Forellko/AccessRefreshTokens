@@ -7,8 +7,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.use('/api/', routers.routerLogin)
-app.use('/api/', routers.routerRefresh)
 app.use('/api/', routers.routerUser)
+app.use('/api/', routers.routerRefresh)
 
 const PORT = 3000
 app.listen(PORT, () => {
