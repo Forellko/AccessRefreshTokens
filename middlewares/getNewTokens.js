@@ -2,12 +2,11 @@ const { User } = require('../models')
 const jwt = require('jsonwebtoken')
 
 const getNewTokens = async (req, res, next) => {
-  const { username, password } = req.body
+  const { username } = req.body
 
   const currentUser = await User.findOne({
     where: {
       username: username,
-      password: password,
     },
   })
 

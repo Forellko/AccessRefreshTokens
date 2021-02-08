@@ -11,7 +11,7 @@ const checkAccessToken = async (req, res, next) => {
   })
 
   try {
-    await jwt.verify(accessToken, 'fusionA')
+    jwt.verify(accessToken, 'fusionA', () => {})
     res.status(200).json(currentUser.dataValues)
     next()
   } catch (error) {

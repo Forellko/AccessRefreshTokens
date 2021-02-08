@@ -2,8 +2,8 @@ POST http://localhost:3000/api/login
 Content-Type: application/json
 
 {
-  "username": "admin",
-  "password": "admin"
+  "username": "admin1",
+  "password": "admin1"
 }
 
 ###
@@ -12,7 +12,7 @@ GET http://localhost:3000/api/user/1
 Content-Type: application/json
 
 {
-  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyNzg4Njk2LCJleHAiOjE2MTI3ODg3MjZ9.hardoT9XeLjpJS_iU7H0JzogIQ233Vw27FiiN-cmNpU"
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjEyNzkxNjYxLCJleHAiOjE2MTI3OTE2OTF9.NCuUv4RzU2SUquAmNLky2TEPLGhh_iU5HFxjFJ442kw"
 }
 
 ###
@@ -21,5 +21,5 @@ POST http://localhost:3000/api/refresh
 Content-Type: application/json
 
 {
-  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjEyNzg4Njk2LCJleHAiOjE2MTI3ODg3NTZ9.pUD9D47ViTyppPMT_BF2itM0-FNLO2iZ1mAIZBr_kSI"
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjEyNzkxNjYxLCJleHAiOjE2MTI3OTE3MjF9.-ulO3BTQBvJwMBu2VF7FBvpAEBxI-iyO6YLFwrTm5tU"
 }

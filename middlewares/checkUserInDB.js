@@ -1,16 +1,21 @@
 const { User } = require('../models')
+const CryptoJS = require('crypto-js')
 
 const checkUserInDB = async (req, res, next) => {
   const { username, password } = req.body
 
-  const isUserExist = await User.findOne({
+  const currentUser = await User.findOne({
     where: {
       username: username,
-      password: password,
     },
   })
 
-  if (isUserExist) {
+  // console.log(CryptoJS.AES.encrypt(password, 'Fusion').toString())
+  const bytes = CryptoJS.AES.decrypt(currentUser.dataValues.password, 'Fusion')
+
+  const originalPassword = bytes.toString(CryptoJS.enc.Utf8)
+
+  if (password === originalPassword) {
     console.log('Success')
     next()
   } else {
