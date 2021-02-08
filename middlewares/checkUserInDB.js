@@ -11,10 +11,10 @@ const checkUserInDB = async (req, res, next) => {
   })
 
   if (isUserExist) {
-    res.status(200).json(isUserExist.dataValues.username)
+    res.status(200).send('Welcome')
     next()
   } else {
-    res.status(401).json({ username: username })
+    res.status(401).send('User not found')
   }
 }
 
