@@ -2,9 +2,9 @@
   "name": "AccessRefreshTokens",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "yarn start"
+    "test": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,8 @@
     "jsonwebtoken": "^8.5.1",
     "postgres": "^1.0.2",
     "sequelize": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
