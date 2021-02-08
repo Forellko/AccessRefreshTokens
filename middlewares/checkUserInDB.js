@@ -11,10 +11,10 @@ const checkUserInDB = async (req, res, next) => {
   })
 
   if (isUserExist) {
-    res.status(200).send('Welcome')
+    console.log('Success')
     next()
   } else {
-    res.status(401).send('User not found')
+    console.log('User not found')
   }
 }
 

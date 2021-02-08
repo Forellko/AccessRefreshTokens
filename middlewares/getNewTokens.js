@@ -16,7 +16,7 @@ const getNewTokens = async (req, res, next) => {
     }
   )
 
-  req.body.tokens = { accessToken, refreshToken }
+  res.status(200).json({ accessToken, refreshToken })
 
   next()
 }
