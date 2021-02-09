@@ -1,6 +1,5 @@
 const onGetUser = async (req, res) => {
-  console.log(req.params)
-  console.log('onGetUser')
-}
+  res.status(200).json(req.body.user);
+};
 
-module.exports = { onGetUser }
+module.exports = { onGetUser };

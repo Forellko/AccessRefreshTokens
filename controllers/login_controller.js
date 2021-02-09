@@ -1,5 +1,9 @@
 const onPostLogin = async (req, res) => {
-  console.log('onPostLogin')
-}
+  const { accessToken, refreshToken } = req.body;
+  res.status(200).json({
+    accessToken,
+    refreshToken,
+  });
+};
 
-module.exports = { onPostLogin }
+module.exports = { onPostLogin };

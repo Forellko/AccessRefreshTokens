@@ -1,5 +1,9 @@
 const onPostRefresh = async (req, res) => {
-  console.log('onPostRefresh')
-}
+  const { accessToken, refreshToken } = req.body;
+  res.status(200).json({
+    accessToken,
+    refreshToken,
+  });
+};
 
-module.exports = { onPostRefresh }
+module.exports = { onPostRefresh };
