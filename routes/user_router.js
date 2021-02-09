@@ -1,8 +1,8 @@
-const { Router } = require('express')
-const { onGetUser } = require('../controllers/user_controller')
-const checkAccessToken = require('../middlewares/checkAccessToken')
-const router = Router()
+const { Router } = require('express');
+const { onGetUser } = require('../controllers/user_controller');
+const checkToken = require('../middlewares/checkToken');
+const router = Router();
 
-router.get('/user/:id', checkAccessToken, onGetUser)
+router.get('/user/:id', checkToken, onGetUser);
 
-module.exports = router
+module.exports = router;

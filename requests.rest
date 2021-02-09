@@ -12,7 +12,7 @@ GET http://localhost:3000/api/user/1
 Content-Type: application/json
 
 {
-  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjEyODcxMzU3LCJleHAiOjE2MTI4NzEzNjd9.4qKpnOTxVtjXwT8caLtyTnf750wlb2ZekHfwWOc2hok"
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjEyODczMjQ3LCJleHAiOjE2MTI4NzMyNTd9.x6omLOyKNPgxxEzCki5jmmtrkUfv7987BHngwff_Gm0"
 }
 
 ###
@@ -21,5 +21,5 @@ POST http://localhost:3000/api/refresh
 Content-Type: application/json
 
 {
-  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjEyODcxNjE4LCJleHAiOjE2MTI4NzE2MzN9.ojCv-kSX2vY-E9DAec5k5CCtlR346JznH8CQ6Rwo9kM"
+  "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjEyODc0NzY1LCJleHAiOjE2MTI4NzQ4ODV9.8_xMF0DhW5a62chryGKMoIoYjY_Afa35tDRt3x4mPto"
 }
