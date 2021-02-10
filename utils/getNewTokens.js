@@ -1,8 +1,9 @@
 const { User } = require('../models');
 const jwt = require('jsonwebtoken');
+const util = require('util');
 
 // support func
-const generateTokens = (id) => {
+const getNewTokens = (id) => {
   const accessToken = jwt.sign({ id }, process.env.SECRET, {
     expiresIn: +process.env.ACCESS_TIME,
   });
@@ -19,26 +20,6 @@ const generateTokens = (id) => {
     }
   );
   return { accessToken, refreshToken };
-};
-
-// main func
-const getNewTokens = async (req, res, next) => {
-  const { username, id } = req.body;
-
-  if (username) {
-    const currentUser = await User.findOne({
-      where: {
-        username: username,
-      },
-    });
-    req.body = generateTokens(currentUser.id);
-    return next();
-  }
-
-  if (id) {
-    req.body = generateTokens(id);
-    return next();
-  }
 };
 
 module.exports = getNewTokens;

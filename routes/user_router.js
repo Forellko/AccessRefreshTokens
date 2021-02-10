@@ -1,8 +1,8 @@
 const { Router } = require('express');
 const { onGetUser } = require('../controllers/user_controller');
-const checkToken = require('../middlewares/checkToken');
+const isAuth = require('../middlewares/isAuth');
 const router = Router();
 
-router.get('/user/:id', checkToken, onGetUser);
+router.get('/user/:id', isAuth, onGetUser);
 
 module.exports = router;

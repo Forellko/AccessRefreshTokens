@@ -1,9 +1,9 @@
+const generateTokens = require('../utils/getNewTokens');
+
 const onPostRefresh = async (req, res) => {
-  const { accessToken, refreshToken } = req.body;
-  res.status(200).json({
-    accessToken,
-    refreshToken,
-  });
+  /// Добавить проверку в бд рефреш
+
+  res.status(200).json(generateTokens(req.id));
 };
 
 module.exports = { onPostRefresh };
