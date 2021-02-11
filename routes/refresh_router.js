@@ -1,8 +1,7 @@
 const { Router } = require('express');
 const { onPostRefresh } = require('../controllers/refresh_controller');
-const isAuth = require('../middlewares/isAuth');
 const router = Router();
 
-router.post('/refresh', isAuth, onPostRefresh);
+router.post('/refresh', onPostRefresh);
 
 module.exports = router;

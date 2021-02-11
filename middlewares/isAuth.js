@@ -6,6 +6,8 @@ const isAuth = async (req, res, next) => {
   let token;
   if (bearer) {
     token = bearer.split(' ')[1];
+  } else {
+    return res.status(400).json(err);
   }
 
   jwt.verify(token, process.env.SECRET, async (err, decoded) => {
